@@ -22,15 +22,16 @@ body {
     background-size: cover;
 }
 
+/*backdrop-filter: blur(10px);*/
+
 .wrapper {
     width: 400px;
     color: aliceblue;
+    background-color: black;
     padding: 30px;
     margin: 40px;
     border: none;
     border-radius: 20px;
-    backdrop-filter: blur(10px);
-    background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     box-shadow: 0 0 10px rgba(0,0,0, .2);
 }
@@ -62,14 +63,6 @@ body {
     padding-right: 20px;
 }
 
-.input-box input::placeholder {
-    color: #fff;
-    position: absolute;
-    font-size: 1em;
-    padding: 0 25px;
-    margin: 0 20px;
-    transition: 0.2 ease;
-}
 
 input:focus,
 input:valid{
@@ -77,12 +70,10 @@ input:valid{
     border: 2px solid #ebe535e8;
 }
 
-input:focus + .input-box input,
-input:valid + .input-box input{
-    color: #ebe535e8;
-    height: 30px;
-    line-height: 30px;
-    transform: translate(-15px, -16px);
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top:0px;
+    font-size: 12px;
 }
 
 .input-box i{
@@ -91,6 +82,21 @@ input:valid + .input-box input{
     top: 50%;
     transform: translateY(-50%);
     font-size: 25px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    padding: 0 5px;
+    transition: .5s;
+    background-color: rgb(0, 0, 0);
+    border-left: 2px solid #ebe535e8;
+    border-right: 2px solid #ebe535e8 ;
 }
 
 .wrapper .remember-forgot{
