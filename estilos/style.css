@@ -70,10 +70,13 @@ input:valid{
     border: 2px solid #ebe535e8;
 }
 
+
 .input-box input:focus~span,
 .input-box input:valid~span {
     top:0px;
     font-size: 12px;
+    border-left: 3px solid #ebe535e8;
+    border-right: 3px solid #ebe535e8;
 }
 
 .input-box i{
@@ -95,8 +98,6 @@ input:valid{
     padding: 0 5px;
     transition: .5s;
     background-color: rgb(0, 0, 0);
-    border-left: 2px solid #ebe535e8;
-    border-right: 2px solid #ebe535e8 ;
 }
 
 .wrapper .remember-forgot{
